@@ -3,11 +3,18 @@ import DescriptionWithLink from "../shared/description_with_link";
 import GrayImg from "../shared/gray_img";
 
 function Planet(props) {
+    let title;
+    if (props.titleUnderline) {
+        title = <h4><u>{props.nome}</u></h4>
+    } else {
+        title = <h4>{props.nome}</h4>
+    }
+
     return (
         <div>
-            <h4>{props.nome}</h4>
+            {title}
             <DescriptionWithLink description={props.description} link_url={props.link_url}/>
-            <GrayImg img_url={props.img_url}/>
+            <GrayImg img_url={props.img_url} gray={props.gray}/>
         </div>
     )
 }
