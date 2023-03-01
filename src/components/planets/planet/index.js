@@ -3,10 +3,10 @@ import DescriptionWithLink from "../shared/description_with_link";
 import GrayImg from "../shared/gray_img";
 
 function Planet(props) {
-    const names = ['Lua', 'MySQL', 'Java', 'JS']
+    /* const names = ['Lua', 'MySQL', 'Java', 'JS']
     const satelites = names.map((elemento) =>
         <li>Satélite {elemento}</li>
-    )
+    )*/
 
 
     let title;
@@ -19,13 +19,16 @@ function Planet(props) {
     return (
         <div>
             {title}
-            <DescriptionWithLink description={props.description} link_url={props.link_url}/>
-            <GrayImg img_url={props.img_url} gray={props.gray}/>
+            <DescriptionWithLink description={props.description} link_url={props.link_url} />
+            <GrayImg img_url={props.img_url} gray={props.gray} />
 
             <h4>Satélites: </h4>
             <ul>
-                {satelites}
+                {['Lua', 'MySQL', 'Java', 'JS'].map((elemento) =>
+                    <li>Satélite {elemento}</li>
+                )}
             </ul>
+
         </div>
     )
 }
