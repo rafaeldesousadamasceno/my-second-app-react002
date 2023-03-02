@@ -5,9 +5,9 @@ import GrayImg from "../shared/gray_img";
 function Planet(props) {
     let title;
     if (props.titleUnderline) {
-        title = <h4><u>{props.nome}</u></h4>
+        title = <h4><u>{props.name}</u></h4>
     } else {
-        title = <h4>{props.nome}</h4>
+        title = <h4>{props.name}</h4>
     }
 
     return (
